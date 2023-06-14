@@ -1,0 +1,155 @@
+// colors
+$colors: (
+  "primary": $primary,
+  "white": $white,
+  "red": $red,
+  "blue": $blue,
+  "gray": $gray,
+  "dark": $dark,
+);
+
+// Sizes.
+$sizes: (
+  "0": 0,
+  "1": $s-1,
+  "2": $s-2,
+  "3": $s-3,
+  "4": $s-4,
+  "5": $s-5,
+);
+
+$breakpoints: (
+  "sm": $mobile,
+  "md": $tablet,
+  "lg": $desktop,
+);
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+) !default;
+
+@each $name, $color in $colors {
+  .text--#{$name} {
+    color: $color !important;
+  }
+  .bg--#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $size, $value in $sizes {
+  .p-#{$size},
+  .py-#{$size},
+  .pt-#{$size} {
+    padding-top: $value;
+  }
+  .p-#{$size},
+  .py-#{$size},
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+  .p-#{$size},
+  .px-#{$size},
+  .pl-#{$size} {
+    padding-left: $value;
+  }
+  .p-#{$size},
+  .px-#{$size},
+  .pr-#{$size} {
+    padding-right: $value;
+  }
+  .m-#{$size},
+  .my-#{$size},
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+  .m-#{$size},
+  .my-#{$size},
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+  .m-#{$size},
+  .mx-#{$size},
+  .ml-#{$size} {
+    margin-left: $value;
+  }
+  .m-#{$size},
+  .mx-#{$size},
+  .mr-#{$size} {
+    margin-right: $value;
+  }
+}
+
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Up to $mobile breakpoint. Usually mobile.
+@mixin mobile-about {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+// $tablet breakpoint above. Tablets.
+@mixin tablet-above {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+// $desktop breakpoint abote, Desktop.
+@mixin desktop-above {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@each $key, $value in $breakpoints {
+  @media screen and (max-width: $mobile) {
+    .hidden {
+      display: none !important;
+    }
+
+    .block {
+      display: block !important;
+    }
+
+    .flex {
+      display: flex !important;
+    }
+  }
+
+  @media screen and (min-width: $value) {
+    .#{$key}-hidden {
+      display: none !important;
+    }
+
+    .#{$key}-block {
+      display: block !important;
+    }
+
+    .#{$key}-flex {
+      display: flex !important;
+    }
+
+    .#{$key}-inline {
+      display: inline !important;
+    }
+  }
+}
+
+@each $key, $value in $font-sizes {
+  h#{$key},
+  .h#{$key} {
+    font-size: $value;
+  }
+}

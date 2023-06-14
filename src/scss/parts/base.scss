@@ -1,0 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  color: $dark;
+  background-color: $white;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}

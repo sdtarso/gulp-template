@@ -1,0 +1,37 @@
+// Colors
+$white: #fff;
+$red: #ce1b28;
+$blue: #03f4f1;
+$gray: #483f3f;
+$dark: #1c1818;
+$primary: $red !default;
+
+// Breakpoint
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1280px;
+
+// Font Family
+$font-family: "Google Sans", sans-serif;
+
+// Sizes
+$default-font-size: 1rem;
+$s-1: $default-font-size * 0.25;
+$s-2: $default-font-size * 0.5;
+$s-3: $default-font-size;
+$s-4: $default-font-size * 2;
+$s-5: $default-font-size * 4;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+$font-size-base: $s-3;
+// Title fontf sizes
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;

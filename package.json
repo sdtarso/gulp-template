@@ -1,0 +1,40 @@
+{
+  "name": "hack-slot",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdtarso/gulp-template"
+  },
+  "keywords": [],
+  "author": "Saulo Araújo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdtarso/gulp-template/issues"
+  },
+  "scripts": {
+    "dev": "open-cli dist/index.html && gulp watch",
+    "build": "gulp --build"
+  },
+  "homepage": "https://github.com/sdtarso/gulp-template#readme",
+  "devDependencies": {
+    "commitizen": "^4.2.3",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^9.0.0",
+    "open-cli": "^7.2.0",
+    "prettier": "^2.2.1",
+    "yargs": "^17.7.2"
+  }
+}
